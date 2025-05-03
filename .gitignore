@@ -1,0 +1,12 @@
+# Ignore windows system file
+desktop.ini
+
+# Environment files
+.env
+
+# Node modules
+frontend/node_modules/
+backend/node_modules/
+
+# Build outputs
+dist/
