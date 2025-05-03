@@ -59,15 +59,16 @@ const Home = () => {
       <div className='flex h-screen items-center justify-center pb-7'>
 
         <div className='border-2 border-dashed px-4 py-2 md:px-8 md:py-6 border-green-400 rounded-lg shadow-lg'>
-          <h1 className='text-3xl font-bold text-center mb-4'>Convert Word to PDF with just <span className='text-green-500'>one click</span></h1>
-          <p className='text-sm text-center mb-5'>Easily convert Word Documents instantly to PDF format online, without having to install any software.</p>
+          <h1 className='text-3xl font-bold text-center mb-2'>Convert Word to PDF with just <span className='text-green-500'>one click</span></h1>
+          <p className='text-sm text-center mb-4'>Convert your Word Documents to PDF format instantly, without risking your personal data.</p>
 
-        <div className='flex flex-col items-center space-y-4'>
+        <div className='flex flex-col items-center space-y-5'>
           <input onChange={handlerFileChange} className='hidden' type="file" accept='.doc, .docx' id='FileInput' />
-          <label htmlFor="FileInput" className='w-full flex items-center justify-center gap-4 px-4 py-6 bg-green-100 text-gree-950 rounded-lg shadow-lg cursor-pointer border-blue-300 hover:bg-green-700 hover:text-white dark:text-green-950 dark:hover:text-white transition-all duration-500 ease'>
-            <FaFileWord className='sm:w-8 sm:h-8' />
-            <span className='text-2xl mr-3 font-semibold'>{selectedFile ? selectedFile.name : 'CHOOSE FILE'}</span>
+          <label htmlFor="FileInput" className='w-full flex items-center justify-center gap-4 px-4 py-5 bg-green-100 text-gree-950 rounded-lg shadow-lg cursor-pointer border-blue-300 hover:bg-green-700 hover:text-white dark:text-green-950 dark:hover:text-white transition-all duration-500 ease'>
+            <FaFileWord className='w-6 h-6 sm:w-8 sm:h-8' />
+            <span className='text-xl tracking-wider mr-3 font-semibold'>{selectedFile ? selectedFile.name : 'CHOOSE FILE'}</span>
           </label>
+
           <button onClick={handleSubmit} disabled={!selectedFile} className='text-white bg-green-600 disabled:bg-gray-400 disabled:pointer-events-none hover:bg-green-700 duration-300 font-bold px-4 py-2 rounded-lg'>Convert to PDF</button>
           {convert && ( <div className='text-green-500 text-center font-semibold tracking-wider dark:text-green-400'>{convert}</div> )}
           {downloadError && ( <div className='text-red-500 text-center dark:text-red-400 dark:text-center'>{downloadError}</div> )}

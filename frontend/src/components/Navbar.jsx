@@ -29,7 +29,7 @@ const Navbar = () => {
 
         <div className='flex items-center gap-4'>
 
-          <h1 className='mt-1 text-2xl cursor-pointer font-bold hover:scale-125 duration-300'>Home</h1>
+          <h1 className='mt-1 text-2xl cursor-pointer font-bold hover:scale-110 duration-300'>Home</h1>
 
           <div
           onClick={toggleDarkMode}
